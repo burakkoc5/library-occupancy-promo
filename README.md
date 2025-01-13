@@ -1,8 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Library Occupancy Promo Website
 
-## Getting Started
+A modern web application built with Next.js to showcase and promote the Library Occupancy tracking system. This project uses the latest Next.js features and modern web technologies to create a responsive and engaging user experience.
 
-First, run the development server:
+## 🚀 Technologies
+
+- **Framework**: Next.js 15 with React 19
+- **Styling**: TailwindCSS and Styled Components
+- **Animations**: Framer Motion
+- **Language**: TypeScript
+- **Development**: TurboPack for fast refresh
+
+## 🛠️ Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (Latest LTS version recommended)
+- npm, yarn, or pnpm
+
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/library-occupancy-promo.git
+cd library-occupancy-promo
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+## 🚀 Development
+
+To start the development server:
 
 ```bash
 npm run dev
@@ -10,28 +46,66 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create a production build:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+To start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+# or
+yarn start
+# or
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 Linting
 
-## Deploy on Vercel
+To run the linter:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run lint
+# or
+yarn lint
+# or
+pnpm lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# library-occupancy-promo
+## 📁 Project Structure
+
+```
+├── src/               # Source files
+├── public/           # Static assets
+├── .next/            # Next.js build output
+├── node_modules/     # Dependencies
+└── ...config files   # Various configuration files
+```
+
+## 🔧 Configuration Files
+
+- `next.config.ts` - Next.js configuration
+- `tailwind.config.ts` - TailwindCSS configuration
+- `postcss.config.mjs` - PostCSS configuration
+- `eslint.config.mjs` - ESLint configuration
+- `tsconfig.json` - TypeScript configuration
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

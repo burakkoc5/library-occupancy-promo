@@ -3,19 +3,96 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 45, 55, 72;
+  --background-start: #ffffff;
+  --background-end: #f8f9fa;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(var(--foreground-rgb));
+  background: var(--background-start);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-montserrat);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-top: 80px; /* Height of the navbar */
+}
+
+section {
+  padding: 6rem 2rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass effect for sections */
+section.with-bg {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 112, 243, 0.1);
+  border-radius: 16px;
+  margin: 3rem auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section-specific styles */
+section.with-bg:nth-child(3) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(248, 249, 250, 0.9)
+  );
+  border-color: rgba(0, 112, 243, 0.15);
+}
+
+section.with-bg:nth-child(4) {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 249, 250, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-color: rgba(0, 112, 243, 0.1);
+}
+
+section.with-bg:nth-child(5) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(248, 249, 250, 0.95)
+  );
+  border-color: rgba(0, 112, 243, 0.12);
+}
+
+/* Hover effects */
+section.with-bg:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  section.with-bg {
+    margin: 2rem auto;
+    border-radius: 12px;
+  }
+
+  section.with-bg:hover {
+    transform: none;
+  }
 }

@@ -40,6 +40,8 @@ const DemoContainer = styled.div`
   gap: 4rem;
 `;
 
+// Video container component kept for future implementation
+/*
 const VideoContainer = styled.div`
   width: 100%;
   border-radius: 16px;
@@ -49,6 +51,7 @@ const VideoContainer = styled.div`
   aspect-ratio: 16/9;
   position: relative;
 `;
+*/
 
 const DesignShowcase = styled.div`
   display: grid;
@@ -114,13 +117,14 @@ const designImages = [
 ];
 
 const DemoSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  // Video ref kept for future implementation
+  // const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2.0;
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     videoRef.current.playbackRate = 2.0;
+  //   }
+  // }, []);
 
   return (
     <SectionContainer id="demo-section">
@@ -137,6 +141,7 @@ const DemoSection = () => {
         </SectionSubtitle>
 
         <DemoContainer>
+          {/* Video section commented out for now - to be implemented later
           <VideoContainer>
             <video
               ref={videoRef}
@@ -146,10 +151,11 @@ const DemoSection = () => {
               playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             >
-              <source src="/images/demo.mp4" type="video/mp4" />
+              <source src="/videos/demo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </VideoContainer>
+          */}
 
           <DesignShowcase>
             {designImages.map((image, index) => (

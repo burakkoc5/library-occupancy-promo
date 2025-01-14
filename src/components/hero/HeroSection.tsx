@@ -37,6 +37,9 @@ const HeroContent = styled(motion.div)`
   color: #2d3748;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const MainHeadline = styled(motion.h1)`
@@ -48,6 +51,7 @@ const MainHeadline = styled(motion.h1)`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -63,6 +67,7 @@ const SubHeadline = styled(motion.p)`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 1.25rem;
@@ -71,12 +76,15 @@ const SubHeadline = styled(motion.p)`
 
 const CTAContainer = styled(motion.div)`
   display: flex;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 500px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 100%;
     max-width: 300px;
   }
 `;
@@ -86,14 +94,18 @@ interface CTAButtonProps {
 }
 
 const CTAButton = styled(motion.button)<CTAButtonProps>`
-  padding: 1.25rem 2.5rem;
+  padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
   font-family: var(--font-montserrat);
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: 200px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   ${({ primary }) =>
     primary

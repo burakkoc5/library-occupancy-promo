@@ -40,18 +40,6 @@ const DemoContainer = styled.div`
   gap: 4rem;
 `;
 
-// Video container component kept for future implementation
-
-const VideoContainer = styled.div`
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  background: #f8f9fa;
-  aspect-ratio: 16/9;
-  position: relative;
-`;
-
 const DesignShowcase = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -68,6 +56,18 @@ const DesignImage = styled(motion.div)`
   &:hover {
     transform: translateY(-5px);
   }
+`;
+
+// Video container component kept for future implementation
+
+const VideoContainer = styled.div`
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background: #f8f9fa;
+  aspect-ratio: 16/9;
+  position: relative;
 `;
 
 const FeatureDescription = styled.div`
@@ -93,25 +93,41 @@ const FeatureText = styled.p`
 
 const designImages = [
   {
-    src: "/images/dashboard.png",
+    src: "/images/login.png",
+    alt: "Secure User Authentication",
+    title: "Secure User Authentication",
+    description: "Secure User Authentication for users",
+  },
+  {
+    src: "/images/occupancy.png",
     alt: "Real-time Dashboard",
     title: "Real-time Occupancy Dashboard",
     description:
       "Monitor library spaces with our intuitive dashboard showing live occupancy data.",
   },
   {
-    src: "/images/dashboard.png",
-    alt: "Occupancy Heatmap",
-    title: "Occupancy Heatmap",
-    description:
-      "Visualize space usage patterns with detailed heatmaps for better resource allocation.",
+    src: "/images/analysis.png",
+    alt: "Occupancy Analysis",
+    title: "Occupancy Analysis",
+    description: "Visualize space usage patterns for all libraries together.",
   },
   {
-    src: "/images/dashboard.png",
-    alt: "Analytics Interface",
-    title: "Advanced Analytics",
-    description:
-      "Make data-driven decisions with comprehensive usage statistics and trends.",
+    src: "/images/admin-settings.png",
+    alt: "Admin Interface",
+    title: "Configurable Settings",
+    description: "As an admin configure library mangagement freely.",
+  },
+  {
+    src: "/images/notifications.png",
+    alt: "Notifications",
+    title: "Notifications",
+    description: "Get notified based on your configurations",
+  },
+  {
+    src: "/images/profile.png",
+    alt: "Different User Roles",
+    title: "Different User Roles",
+    description: "User roles for managers and others",
   },
 ];
 
@@ -155,7 +171,6 @@ const DemoSection = () => {
               </video>
             </VideoContainer>
           }
-
           <DesignShowcase>
             {designImages.map((image, index) => (
               <motion.div

@@ -96,3 +96,26 @@ section.with-bg:hover {
     transform: none;
   }
 }
+
+/* CTA Buttons Container */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cta-container button {
+    width: 100%;
+  }
+}

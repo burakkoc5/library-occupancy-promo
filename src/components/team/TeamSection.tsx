@@ -94,27 +94,27 @@ const SocialLink = styled.a`
 const teamMembers = [
   {
     name: "Burak Koç",
-    role: "Full Stack Developer",
+    role: "Computer Engineer",
     image: "/images/burak.jpeg",
-    bio: "Computer Engineering student passionate about web development and AI.",
+    bio: "Computer Engineering student passionate about mobile development and backend systems.",
     github: "https://github.com/burakkoc5",
-    linkedin: "https://linkedin.com/in/burak-koc",
+    linkedin: "https://linkedin.com/in/koc-burak",
   },
   {
     name: "Furkan Safa Altunyuva",
-    role: "Machine Learning Engineer",
-    image: "/images/burak.jpeg",
-    bio: "Computer Engineering student specializing in computer vision and deep learning.",
+    role: "Computer Engineer",
+    image: "/images/furkan.jpeg",
+    bio: "Computer Engineering student specializing in Aı and Game Programming.",
     github: "https://github.com/fsaltunyuva",
-    linkedin: "https://linkedin.com/in/fsaltunyuva",
+    linkedin: "https://www.linkedin.com/in/furkanaltunyuva/",
   },
   {
     name: "Buse Öner",
-    role: "Backend Developer",
-    image: "/images/burak.jpeg",
-    bio: "Computer Engineering student focused on backend development and system architecture.",
-    github: "https://github.com/buseoner9",
-    linkedin: "https://linkedin.com/in/buseoner",
+    role: "Computer Engineer",
+    image: "/images/buse.png",
+    bio: "Computer Engineering student focused on backend development",
+    github: "https://github.com/buseoner",
+    linkedin: "https://www.linkedin.com/in/buse-öner-84691824b/",
   },
 ];
 
@@ -145,6 +145,8 @@ const TeamSection = () => {
                   alt={member.name}
                   fill
                   style={{ objectFit: "cover" }}
+                  priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
               </MemberImage>
               <MemberInfo>

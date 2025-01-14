@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -41,7 +41,7 @@ const DemoContainer = styled.div`
 `;
 
 // Video container component kept for future implementation
-/*
+
 const VideoContainer = styled.div`
   width: 100%;
   border-radius: 16px;
@@ -51,7 +51,6 @@ const VideoContainer = styled.div`
   aspect-ratio: 16/9;
   position: relative;
 `;
-*/
 
 const DesignShowcase = styled.div`
   display: grid;
@@ -118,13 +117,13 @@ const designImages = [
 
 const DemoSection = () => {
   // Video ref kept for future implementation
-  // const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  // useEffect(() => {
-  //   if (videoRef.current) {
-  //     videoRef.current.playbackRate = 2.0;
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2.0;
+    }
+  }, []);
 
   return (
     <SectionContainer id="demo-section">
@@ -141,21 +140,21 @@ const DemoSection = () => {
         </SectionSubtitle>
 
         <DemoContainer>
-          {/* Video section commented out for now - to be implemented later
-          <VideoContainer>
-            <video
-              ref={videoRef}
-              autoPlay
-              muted
-              loop
-              playsInline
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            >
-              <source src="/videos/demo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </VideoContainer>
-          */}
+          {
+            <VideoContainer>
+              <video
+                ref={videoRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              >
+                <source src="/videos/demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </VideoContainer>
+          }
 
           <DesignShowcase>
             {designImages.map((image, index) => (

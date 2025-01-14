@@ -35,16 +35,6 @@ const Logo = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
-const NavLinks = styled.div`
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
 const NavLink = styled(Link)`
   font-family: var(--font-opensans);
   text-decoration: none;

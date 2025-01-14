@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, memo } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useAnimationVariants } from "@/hooks/useAnimationVariants";
 import { NAVIGATION_LINKS, GITHUB_LINK } from "@/constants/navigation";
 import { NavLinkProps, MobileMenuProps } from "./types";

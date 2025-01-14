@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { BackgroundContainer, GradientOrb } from "./styles";
 import { orbConfigs } from "./config";
 

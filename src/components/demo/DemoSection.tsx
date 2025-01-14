@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -91,21 +91,21 @@ const FeatureText = styled.p`
 
 const designImages = [
   {
-    src: "/dashboard.png",
+    src: "/images/dashboard.png",
     alt: "Real-time Dashboard",
     title: "Real-time Occupancy Dashboard",
     description:
       "Monitor library spaces with our intuitive dashboard showing live occupancy data.",
   },
   {
-    src: "/heatmap.png",
+    src: "/images/dashboard.png",
     alt: "Occupancy Heatmap",
     title: "Occupancy Heatmap",
     description:
       "Visualize space usage patterns with detailed heatmaps for better resource allocation.",
   },
   {
-    src: "/analytics.png",
+    src: "/images/dashboard.png",
     alt: "Analytics Interface",
     title: "Advanced Analytics",
     description:
@@ -114,6 +114,14 @@ const designImages = [
 ];
 
 const DemoSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2.0;
+    }
+  }, []);
+
   return (
     <SectionContainer id="demo-section">
       <ContentWrapper>
@@ -131,13 +139,14 @@ const DemoSection = () => {
         <DemoContainer>
           <VideoContainer>
             <video
+              ref={videoRef}
               autoPlay
               muted
               loop
               playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             >
-              <source src="/demo.mp4" type="video/mp4" />
+              <source src="/videos/demo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </VideoContainer>
